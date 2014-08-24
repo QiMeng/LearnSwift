@@ -13,7 +13,8 @@ class DetailViewController: UIViewController ,UITableViewDelegate,UITableViewDat
     
     
     var myTalbeView:UITableView?;
-    
+    var dataArray = NSMutableArray();
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,7 @@ class DetailViewController: UIViewController ,UITableViewDelegate,UITableViewDat
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        return dataArray.count;
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
@@ -38,7 +39,9 @@ class DetailViewController: UIViewController ,UITableViewDelegate,UITableViewDat
         if cell == nil { // no value
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
         }
-        cell?.textLabel.text = "\(indexPath.row)"
+        
+        
+        cell?.textLabel.text = "\(dataArray[indexPath.row])";
         
         return cell;
     }

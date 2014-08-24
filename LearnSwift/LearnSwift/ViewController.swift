@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
     
+    
     var myTalbeView:UITableView?;
     
     
@@ -48,6 +49,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         
         var detailCtrl = DetailViewController();
         detailCtrl.title = "\(indexPath.row)"
+        detailCtrl.dataArray = ["0-0","0-1"];
         self.navigationController.pushViewController(detailCtrl, animated: true);
         
     }

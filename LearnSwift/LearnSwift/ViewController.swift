@@ -24,6 +24,7 @@ class ViewController: BaseViewController ,UITableViewDelegate,UITableViewDataSou
         array.addObject("UIFont");
         array.addObject("UILabel");
         array.addObject("UIButton");
+        array.addObject("UITextField");
 
         myTalbeView = UITableView(frame: self.view.frame);
         myTalbeView?.delegate = self;

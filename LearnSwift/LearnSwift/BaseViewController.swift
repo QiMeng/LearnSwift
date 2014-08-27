@@ -2,7 +2,7 @@
 //  BaseViewController.swift
 //  LearnSwift
 //
-//  Created by strongsoft on 14-8-27.
+//  Created by QiMengJin on 14-8-27.
 //  Copyright (c) 2014年 QiMengJin_LYS. All rights reserved.
 //
 

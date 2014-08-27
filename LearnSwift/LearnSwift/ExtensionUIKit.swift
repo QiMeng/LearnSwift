@@ -2,7 +2,7 @@
 //  ExtensionUIKit.swift
 //  LearnSwift
 //
-//  Created by strongsoft on 14-8-27.
+//  Created by QiMengJin on 14-8-27.
 //  Copyright (c) 2014年 QiMengJin_LYS. All rights reserved.
 //
 
@@ -55,7 +55,13 @@ extension UIView{
 extension UILabel {
 
     //创建 UILabel
-    func allocLabel(frame:CGRect , text:String ,textColor:UIColor , backgroundColor:UIColor , font:UIFont , textAlignment:NSTextAlignment) ->UILabel {
+    func allocLabel(frame:CGRect ,
+                     text:String ,
+                textColor:UIColor ,
+          backgroundColor:UIColor ,
+                     font:UIFont ,
+            textAlignment:NSTextAlignment) ->UILabel
+    {
 
         self.frame = frame;
         self.text = text;
@@ -82,8 +88,9 @@ extension UIButton {
              selectedImage:UIImage?,
                normalBgImg:UIImage?,
              selectedBgImg:UIImage?,
-                    target:AnyObject,
-                  selector:Selector)->UIButton {
+                    target:AnyObject?,
+                  selector:Selector)->UIButton
+    {
 
         self.frame = frame;
         self.setTitle(normalTitle, forState: UIControlState.Normal);

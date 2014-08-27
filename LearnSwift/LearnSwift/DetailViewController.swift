@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class DetailViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
+class DetailViewController: BaseViewController ,UITableViewDelegate,UITableViewDataSource{
     
     
     var myTalbeView:UITableView?;

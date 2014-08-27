@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-class FontViewController : UIViewController , UITableViewDelegate,UITableViewDataSource {
+class FontViewController : BaseViewController , UITableViewDelegate,UITableViewDataSource {
     
     
     var fontArray = UIFont.familyNames();
@@ -19,7 +19,6 @@ class FontViewController : UIViewController , UITableViewDelegate,UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
         
         myTableView = UITableView(frame: self.view.frame, style: UITableViewStyle.Grouped);
         myTableView?.autoresizingMask = UIViewAutoresizing.FlexibleHeight

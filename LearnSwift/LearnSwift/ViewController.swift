@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
-    
+class ViewController: BaseViewController ,UITableViewDelegate,UITableViewDataSource{
     
     var myTalbeView:UITableView?;
     
@@ -23,7 +22,8 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         self.title = "Swift World";
         
         array.addObject("UIFont");
-        
+        array.addObject("UILabel");
+
         myTalbeView = UITableView(frame: self.view.frame);
         myTalbeView?.delegate = self;
         myTalbeView?.dataSource = self;
@@ -53,13 +53,20 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         let obj = array[indexPath.row] as String
         
         if obj == "UIFont" {
-
+            
             var ctrl = FontViewController();
             ctrl.title = obj
             self.navigationController.pushViewController(ctrl, animated: true);
             
+        }
+        else if obj == "UILabel"{
             
-        }else {
+            var ctrl = LabelViewController();
+            ctrl.title = obj;
+            self.navigationController.pushViewController(ctrl, animated: true);
+        
+        }
+        else {
             var detailCtrl = DetailViewController();
             detailCtrl.title = "\(indexPath.row)"
             detailCtrl.dataArray = ["0-0","0-1"];

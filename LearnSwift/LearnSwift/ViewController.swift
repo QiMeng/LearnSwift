@@ -23,6 +23,7 @@ class ViewController: BaseViewController ,UITableViewDelegate,UITableViewDataSou
         
         array.addObject("UIFont");
         array.addObject("UILabel");
+        array.addObject("UIButton");
 
         myTalbeView = UITableView(frame: self.view.frame);
         myTalbeView?.delegate = self;
@@ -66,6 +67,15 @@ class ViewController: BaseViewController ,UITableViewDelegate,UITableViewDataSou
             self.navigationController.pushViewController(ctrl, animated: true);
         
         }
+            
+        else if obj == "UIButton"{
+            
+            var ctrl = ButtonViewController();
+            ctrl.title = obj;
+            self.navigationController.pushViewController(ctrl, animated: true);
+            
+        }
+            
         else {
             var detailCtrl = DetailViewController();
             detailCtrl.title = "\(indexPath.row)"

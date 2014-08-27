@@ -11,7 +11,6 @@ import UIKit
 
 class DetailViewController: BaseViewController ,UITableViewDelegate,UITableViewDataSource{
     
-    
     var myTalbeView:UITableView?;
     var dataArray = NSMutableArray();
 

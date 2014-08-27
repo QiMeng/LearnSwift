@@ -11,15 +11,18 @@ import UIKit
 class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSource{
     
     
-    
     var myTalbeView:UITableView?;
     
+    var array = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.navigationController.navigationBar.translucent = false;
         
         self.title = "Swift World";
+        
+        array.addObject("UIFont");
         
         myTalbeView = UITableView(frame: self.view.frame);
         myTalbeView?.delegate = self;
@@ -28,7 +31,7 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
     }
     
     func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return 5;
+        return array.count;
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
@@ -40,17 +43,28 @@ class ViewController: UIViewController ,UITableViewDelegate,UITableViewDataSourc
         if cell == nil { // no value
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
         }
-        cell?.textLabel.text = "\(indexPath.row)"
+        cell?.textLabel.text = array[indexPath.row] as String
         
         return cell;
     }
     
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
-        var detailCtrl = DetailViewController();
-        detailCtrl.title = "\(indexPath.row)"
-        detailCtrl.dataArray = ["0-0","0-1"];
-        self.navigationController.pushViewController(detailCtrl, animated: true);
+        let obj = array[indexPath.row] as String
+        
+        if obj == "UIFont" {
+
+            var ctrl = FontViewController();
+            ctrl.title = obj
+            self.navigationController.pushViewController(ctrl, animated: true);
+            
+            
+        }else {
+            var detailCtrl = DetailViewController();
+            detailCtrl.title = "\(indexPath.row)"
+            detailCtrl.dataArray = ["0-0","0-1"];
+            self.navigationController.pushViewController(detailCtrl, animated: true);
+        }
         
     }
     

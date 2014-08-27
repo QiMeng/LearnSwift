@@ -21,6 +21,7 @@ class DetailViewController: UIViewController ,UITableViewDelegate,UITableViewDat
         // Do any additional setup after loading the view, typically from a nib.
 
         myTalbeView = UITableView(frame: self.view.frame);
+        
         myTalbeView?.delegate = self;
         myTalbeView?.dataSource = self;
         self.view.addSubview(self.myTalbeView!);

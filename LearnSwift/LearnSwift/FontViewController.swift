@@ -9,9 +9,7 @@
 import Foundation
 import UIKit
 
-
 class FontViewController : BaseViewController , UITableViewDelegate,UITableViewDataSource {
-    
     
     var fontArray = UIFont.familyNames();
     

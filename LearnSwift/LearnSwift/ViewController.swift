@@ -81,8 +81,9 @@ class ViewController: BaseViewController ,UITableViewDelegate,UITableViewDataSou
         }
         else if obj == "UITextField" {
             
-            
-            
+            ctrl = TextFieldViewController();
+            ctrl?.title = obj;
+            self.navigationController.pushViewController(ctrl, animated: true);
             
         }
             

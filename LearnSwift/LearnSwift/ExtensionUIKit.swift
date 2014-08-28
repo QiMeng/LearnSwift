@@ -55,11 +55,11 @@ extension UIView{
 extension UILabel {
 
     //创建 UILabel
-    func allocLabel(frame:CGRect ,
-                     text:String ,
-                textColor:UIColor ,
-          backgroundColor:UIColor ,
-                     font:UIFont ,
+    func allocLabel(frame:CGRect,
+                     text:String?,
+                textColor:UIColor?,
+          backgroundColor:UIColor?,
+                     font:UIFont?,
             textAlignment:NSTextAlignment) ->UILabel
     {
 
@@ -115,6 +115,11 @@ extension UIButton {
         
         return self;
     }
+
+}
+
+extension UITextField {
+
 
 }
 

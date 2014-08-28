@@ -54,28 +54,38 @@ class ViewController: BaseViewController ,UITableViewDelegate,UITableViewDataSou
         
         let obj = array[indexPath.row] as String
         
+        
+        var ctrl:UIViewController?
+        
         if obj == "UIFont" {
             
-            var ctrl = FontViewController();
-            ctrl.title = obj
+            ctrl = FontViewController();
+            ctrl?.title = obj
             self.navigationController.pushViewController(ctrl, animated: true);
             
         }
         else if obj == "UILabel"{
             
-            var ctrl = LabelViewController();
-            ctrl.title = obj;
+            ctrl = LabelViewController();
+            ctrl?.title = obj;
             self.navigationController.pushViewController(ctrl, animated: true);
         
         }
             
         else if obj == "UIButton"{
             
-            var ctrl = ButtonViewController();
-            ctrl.title = obj;
+            ctrl = ButtonViewController();
+            ctrl?.title = obj;
             self.navigationController.pushViewController(ctrl, animated: true);
             
         }
+        else if obj == "UITextField" {
+            
+            
+            
+            
+        }
+            
             
         else {
             var detailCtrl = DetailViewController();

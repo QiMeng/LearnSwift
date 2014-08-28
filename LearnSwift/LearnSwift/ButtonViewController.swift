@@ -30,8 +30,6 @@ class ButtonViewController : BaseViewController {
         
         self.view.addSubview(button)
         
-        
-        
     }
     
     func buttonAction(sender:UIButton) {

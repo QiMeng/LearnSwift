@@ -25,6 +25,7 @@ class ViewController: BaseViewController ,UITableViewDelegate,UITableViewDataSou
         array.addObject("UILabel");
         array.addObject("UIButton");
         array.addObject("UITextField");
+        array.addObject("网络请求");
 
         myTalbeView = UITableView(frame: self.view.frame);
         myTalbeView?.delegate = self;
@@ -87,6 +88,13 @@ class ViewController: BaseViewController ,UITableViewDelegate,UITableViewDataSou
             
         }
             
+        else if obj == "网络请求" {
+            
+            ctrl = NetWorkCtrl();
+            ctrl?.title = obj;
+            self.navigationController.pushViewController(ctrl, animated: true);
+            
+        }
             
         else {
             var detailCtrl = DetailViewController();
